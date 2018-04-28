@@ -19,6 +19,7 @@ gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB8
 source ~/.rvm/scripts/rvm
 rvm install *version*
 gem install rails
+pacman -S postgresql-libs
 
 # telegram
 pacman -S telegram-desktop
