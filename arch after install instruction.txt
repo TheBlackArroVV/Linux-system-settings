@@ -23,3 +23,6 @@ pacman -S postgresql-libs
 
 # telegram
 pacman -S telegram-desktop
+
+# command for restart terminal after changing config
+xrdb .Xresources
