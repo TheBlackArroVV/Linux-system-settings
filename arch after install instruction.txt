@@ -1,28 +1,35 @@
-﻿# update
-sudo pacman -Syu
-bash --login
-
-# firefox
+# web
 sudo pacman -S firefox
-sudo pacman -S flashplugin
+yaourt -S google-chrome
 
-# atom
+# ide/text_editor
 sudo pacman -S atom
+yaourt -S jetbrains-toolbox
 
-# theme and icons
-sudo pacman -S numix-gtk-theme
-sudo pacman -S papirus-icon-theme
-
-# ruby/rails
+# development
 gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
 \curl -sSL https://get.rvm.io | bash -s stable
 source ~/.rvm/scripts/rvm
 rvm install *version*
 gem install rails
-pacman -S postgresql-libs
+sudo pacman -S postgresql-libs
+sudo pacman -S postgresql
+sudo su - postgres -c "initdb -E UTF8 -D '/var/lib/postgres/data'"
+sudo chown -R postgres:postgres /var/lib/postgres/
+systemctl start postgresql
+systemctl enable postgresql
+yaourt -S postman-bin
 
-# telegram
-pacman -S telegram-desktop
+# social
+sudo pacman -S telegram-desktop
+yaourt -S slack-desktop 
 
 # command for restart terminal after changing config
 xrdb .Xresources
+
+# shell
+sudo pacman -S zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+# ssh-key
+ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
