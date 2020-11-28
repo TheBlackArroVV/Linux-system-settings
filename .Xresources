@@ -7,7 +7,7 @@ URxvt*title: urxvt
 URxvt*termName: rxvt-unicode-256color
 URxvt.letterSpace: 1
 
-URxvt.font: xft:inconsolata:size=10,style=Regular
+URxvt.font: xft:JetBrainsMono:size=10,style=Regular
 
 *antialias:  true
 *autohint:  true

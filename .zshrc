@@ -100,3 +100,10 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 export PATH="$PATH:$HOME/.rvm/bin"
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+alias disable_touchscreen="xinput disable 11"
+alias enable_touchscreen="xinpunt enable 11"
+alias add_s_s="xrandr --output DP1 --auto --primary --left-of eDP1"
+alias add_s_2="xrandr --output DP1 --auto --primary --left-of eDP2"
+alias ua="exec setxkbmap "us,ua,ru" ",winkeys" "grp:alt_shift_toggle""
+export BROWSER=/usr/bin/chromium
+eval $(thefuck --alias)
